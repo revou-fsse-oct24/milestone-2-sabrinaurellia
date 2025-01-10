@@ -1,34 +1,46 @@
 {
   "name": "milestone-2-sabrinaurellia",
   "version": "1.0.0",
-  "description": "ShopSmart is an interactive React application for an online store, showcasing products, user authentication, and seamless user experience. This project is part of **Project Milestone 2** for the RevoU Software Engineering program.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/revou-fsse-oct24/milestone-2-sabrinaurellia.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/revou-fsse-oct24/milestone-2-sabrinaurellia/issues"
-  },
-  "homepage": "https://github.com/revou-fsse-oct24/milestone-2-sabrinaurellia#readme",
+  "private": true,
   "dependencies": {
-    "@types/react": "^19.0.4",
-    "@types/react-dom": "^19.0.2",
-    "@types/react-router-dom": "^5.3.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.1",
-    "typescript": "^5.7.3"
+    "react-scripts": "^5.0.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/testing-library__react": "^10.0.1",
     "autoprefixer": "^10.4.20",
+    "jest": "^27.5.1",
     "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.17"
+    "prettier": "^3.4.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^4.9.5",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
