@@ -1,29 +1,23 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import LoginRegister from "./pages/LoginRegister";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductListing from "./pages/ProductListing";
-import ProductCategory from "./pages/ProductCategory";
 import ProductDetail from "./pages/ProductDetail";
-import ShoppingCart from "./pages/ShoppingCart";
 
-const App = () => {
-  return (
-    <Router>
-      <div className="flex justify-around bg-gray-100 p-4">
-        <Link to="/" className="text-blue-500 font-bold">Login</Link>
-        <Link to="/products" className="text-blue-500 font-bold">Products</Link>
-        <Link to="/categories" className="text-blue-500 font-bold">Categories</Link>
-        <Link to="/cart" className="text-blue-500 font-bold">Cart</Link>
-      </div>
-      <Routes>
-        <Route path="/" element={<LoginRegister />} />
-        <Route path="/products" element={<ProductListing />} />
-        <Route path="/categories" element={<ProductCategory />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/cart" element={<ShoppingCart />} />
-      </Routes>
-    </Router>
-  );
-};
+const mockProducts = [
+  { id: "1", title: "Product 1", description: "Description 1", price: 100, image: "image1.jpg" },
+  { id: "2", title: "Product 2", description: "Description 2", price: 200, image: "image2.jpg" },
+];
+
+const App = () => (
+  <Router>
+    <Routes>
+      <Route path="/products" element={<ProductListing products={mockProducts} />} />
+      <Route
+        path="/products/:id"
+        element={<ProductDetail product={mockProducts[0]} />} // Example product
+      />
+    </Routes>
+  </Router>
+);
 
 export default App;

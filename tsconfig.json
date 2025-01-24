@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "es6",
+    "module": "CommonJS",
     "jsx": "react-jsx",
     "strict": true,
     "moduleResolution": "node",
@@ -17,9 +17,13 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": [
+    "node_modules", "build", "dist"
+  ],
 }
